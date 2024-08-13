@@ -1,0 +1,272 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.header-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    grid-area: header-mobile;
+    background-color: #FFC300;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+}
+
+.header-div-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.iconos-cabecera-carpa {
+    margin-right: 5px;
+}
+
+.iconos-cabecera-menu {
+    font-size: 2.5rem;
+    margin-right: 10px;
+}
+
+.nav-mobile {
+    grid-area: nav;
+    background-color: #DAF7A6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.label-lista-desplegable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tamaño-select {
+    height: 2rem;
+    width: 12rem;
+    text-align: center;
+    font-size: 20px;
+}
+
+.aside-desktop {
+    display: none;
+}
+
+.main-mobile {
+    grid-area: main-mobile;
+    background-color: #FFFFFF;
+    padding-top: 10px;
+    margin-top: 100px;
+}
+
+.nav-desktop {
+    display: none;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 0 84px;
+}
+
+.gallery-item {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: calc(100vh - 110px - 50px - 34px - 24px);
+    border: 1px solid #E4DAD8;
+    padding: 30px 0;
+    box-shadow: -1px 0px 8px -1px rgba(0,0,0,0.75);
+}
+
+figure{
+    width: 80%;
+    height: 400px;
+}
+
+figcaption {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.formato-imagenes {
+    width: 100%;
+    height: fit-content;
+}
+
+.formato-descripcion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 24px;
+}
+
+button {
+    background-color: #C70039;
+    color:#FFFFFF ;
+    width: 60%;
+    align-self: self-end;
+    padding: 12px 8px;
+    vertical-align: middle;
+    margin-top: 1rem;
+    font-size: 16px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    background: #FFFFFF;
+
+  }
+  
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    width: 32px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+.footer-mobile {
+    grid-area: footer-mobile;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFC300;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.iconos-footer {
+    font-size: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "header-mobile"
+    "main-mobile"
+    "footer-mobile";
+    position: relative;
+}
+
+@media (min-width: 576px) {
+
+.nav-mobile , .iconos-cabecera-menu{
+    display: none;
+}
+
+.header-mobile {
+    grid-area: header-mobile;
+    position: static;
+    height: 120px;
+}
+
+.aside-desktop {
+    display: block;
+    grid-area: aside-desktop;
+    background: #DAF7A6;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.space-list {
+    margin-top: 5px;
+}
+.main-mobile {
+    grid-area: main-mobile;
+    margin-top: 0;
+    padding-top: 0;
+    position: relative;
+}
+
+.nav-desktop {
+    grid-area: nav;
+    background-color: #DAF7A6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+
+}
+
+.gallery {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 40px 20px;
+    height: calc(100% - 120px - 60px);
+    margin: 0;
+}
+
+.gallery-item {
+    height: auto;
+}
+
+.formato-imagenes {
+    height: 100%;
+}
+
+figure {
+    height: 200px;
+}
+
+.pagination {
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    background:#FFFFFF;
+    position: static;
+  }
+
+.footer-mobile {
+    grid-area: footer-mobile;
+    position: static;
+    height: 120px;
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: 120px auto 120px;
+    grid-template-areas: 
+    "header-mobile main-mobile"
+    "aside-desktop main-mobile"
+    "footer-mobile main-mobile";
+} 
+  
+}
